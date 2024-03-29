@@ -69,7 +69,7 @@ export default function ProductDetails({ deets }) {
 export async function getServerSideProps(context) {
   const _id = context.query.slug;
   const deets = await fetch(
-    `https://productapi.vercel.app/api/product/find/${_id}`
+    `https://ecommerce-backend-final-ten.vercel.app/api/product/find/${_id}`
   ).then((res) => res.json());
 
   return {

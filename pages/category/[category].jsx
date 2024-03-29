@@ -20,7 +20,7 @@ export default function Category({ products, _id }) {
 export async function getServerSideProps(context) {
   const _id = context.query.category;
   const products = await fetch(
-    `https://productapi.vercel.app/api/product`
+    `https://ecommerce-backend-final-ten.vercel.app/api/product`
   ).then((res) => res.json());
   return {
     props: {
